@@ -54,7 +54,8 @@ steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)\src\PokerLeagueManager.Utilities\bin\$(BuildConfiguration)'
-    Contents: '**'
+    Contents: |
+      **
     TargetFolder: '$(Build.ArtifactStagingDirectory)\Utility'
 
 - task: VSTest@2
